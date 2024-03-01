@@ -3,9 +3,19 @@ package com.example.asgn3;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
+/**
+ *
+ * Handler class for second column of boxes (i.e. boxes for 30<x<60 and x>90)
+ * Miro Haapalainen, Saylor Benes
+ */
+
 public class BoxHandler2 extends BoxHandler {
-    Rectangle rect1;
-    Rectangle rect2;
+    private Rectangle rect1;
+    private Rectangle rect2;
+
+    /**
+     * On class instantiation, instantiate rectangle backends.
+     */
     public BoxHandler2() {
         this.rect1 = new Rectangle();
         this.rect1.setWidth(5);
@@ -32,5 +42,13 @@ public class BoxHandler2 extends BoxHandler {
         } else if (size > 90) {
             expandBox2();
         }
+    }
+
+    public Rectangle getRect1() {
+        return rect1;
+    }
+
+    public Rectangle getRect2() {
+        return rect2;
     }
 }
